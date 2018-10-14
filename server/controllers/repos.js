@@ -25,8 +25,6 @@ const repoResolvers = {
         return result.items;
       }
       catch (e) {
-        console.log(e.extensions.response);
-        console.log(e.extensions.response.body);
         return error(500, 'Internal Server Error');
       }
     },
