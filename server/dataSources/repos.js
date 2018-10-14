@@ -6,12 +6,9 @@ class ReposAPI extends RESTDataSource {
     this.baseURL = 'https://api.github.com';
   }
 
-  async getRepoList() {
-    return this.get('/search/repositories', {
-      q: 'javascript',
-      sort: 'stars',
-      per_page: 5,
-    });
+  async getRepoList(payload = {}) {
+    const { q = 'javascript', sort = 'desc', per_page = 5 } = payload;
+    return this.get('/search/repositories', { q, sort, per_page });
   }
 }
 
