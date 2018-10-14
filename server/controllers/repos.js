@@ -3,7 +3,7 @@ const error = require('../helpers/errors');
 
 const Repo = gql`
   extend type Query {
-    reposList(q: String, per_page: Int, sort: String): [Repo]
+    reposList(q: String, per_page: Int, sort: Sort): [Repo]
   }
   type Repo {
     name: String
@@ -22,6 +22,7 @@ const repoResolvers = {
         dataSources: { reposApi },
       } = context;
       try {
+        console.log(args);
         const result = await reposApi.getRepoList(args);
         return result.items;
       }

@@ -8,6 +8,13 @@ const Query = gql`
   type Query {
     _empty: String
   }
+  """
+   enum to validate 'sort' field in queries
+  """
+  enum Sort {
+    asc
+    desc
+  }
   type Mutation {
     _empty: String
   }
