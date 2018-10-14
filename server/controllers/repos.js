@@ -21,7 +21,7 @@ const repoResolvers = {
         dataSources: { reposApi },
       } = context;
       try {
-        const result = await reposApi.getRepoList();
+        const result = await reposApi.getRepoList(args);
         return result.items;
       }
       catch (e) {
