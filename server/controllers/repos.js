@@ -3,7 +3,7 @@ const error = require('../helpers/errors');
 
 const Repo = gql`
   extend type Query {
-    reposList: [Repo]
+    reposList(q: String, per_page: Int, sort: String): [Repo]
   }
   type Repo {
     name: String
