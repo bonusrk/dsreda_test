@@ -12,6 +12,7 @@ const Repo = gql`
     stargazers_count: Int
     forks_count: Int
     description: String
+    html_url: String
   }
 `;
 

@@ -12,7 +12,7 @@ class ReposAPI extends RESTDataSource {
    * @param sort String enum ['asc', 'desc'] : sorting order
    * @param per_page Int : documents per page number
    */
-  async getRepoList({ q = 'javascript', sort = 'desc', per_page = 5 }) {
+  getRepoList({ q = 'javascript', sort = 'desc', per_page = 5 }) {
     // info 'bout search queries for git API https://developer.github.com/v3/search/
     // Search syntax docs https://help.github.com/articles/understanding-the-search-syntax/
     // repo search docs https://help.github.com/articles/searching-for-repositories/
